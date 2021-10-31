@@ -1,0 +1,23 @@
+{
+  "name": "working-with-express",
+  "version": "1.0.0",
+  "description": "working with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inaciosacataria/working-with-expressa.git"
+  },
+  "author": "inacio sacataria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inaciosacataria/working-with-expressa/issues"
+  },
+  "homepage": "https://github.com/inaciosacataria/working-with-expressa#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
