@@ -20,8 +20,7 @@ app.use('/admin', adminData.router);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
-    const VIEWS_URL = path.join(__dirname,'views','404.html');
-    res.status(404).sendFile(VIEWS_URL);
+    res.status(404).render('404');
 });
 
 app.listen(3000);
