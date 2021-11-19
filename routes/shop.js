@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
   res.render('shop',
     {
       prods: products,
-      imagUrl: "https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1631738383/amc-cdn/production/2/movies/66900/66945/PosterDynamic/128342.jpg",
+      imgUrl: "https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1631738383/amc-cdn/production/2/movies/66900/66945/PosterDynamic/128342.jpg",
         //urlImages[Math.floor(Math.random() * urlImages.length)],
       docTitle: 'Shop',
       hasProduct: products.length > 0,
