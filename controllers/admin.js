@@ -1,10 +1,10 @@
-const Product= require('../models/product')
+const Product = require('../models/product')
 
 exports.getAddProduct = (req, res, next) => {
     res.render('admin/add-product', {
         docTitle: 'AddProduct',
         path: '/admin/add-product'
-       
+
     })
 }
 
@@ -15,17 +15,16 @@ exports.postAddProduct = (req, res, next) => {
     res.redirect('/');
 }
 
-exports.getProduct = (req, res, next) => {
+exports.getProducts = (req, res, next) => {
     const products = Product.fecthAll((products) => {
-        res.render('shop/product-list',
+        res.render('admin/products',
             {
                 prods: products,
                 imgUrl: "https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1631738383/amc-cdn/production/2/movies/66900/66945/PosterDynamic/128342.jpg",
                 //urlImages[Math.floor(Math.random() * urlImages.length)],
-                docTitle: 'Shop',
+                docTitle: 'My products',
                 //   hasProduct: products.length > 0,
-                path: '/'
+                path: '/admin/produts'
             })
     })
-   
 }
