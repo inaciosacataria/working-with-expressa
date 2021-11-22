@@ -31,7 +31,6 @@ exports.getIndex = (req, res, next) => {
 
 exports.getCart = (req, res, next)=>{
     res.render('shop/cart', {
-        prods: products,
         path: '/cart',
         docTitle: 'Your cart'
         
@@ -40,7 +39,6 @@ exports.getCart = (req, res, next)=>{
 
 exports.getCheckout = (req, res, next)=>{
     res.render('shop/checkout', {
-        prods: products,
         path: '/checkout',
         docTitle: 'Checkout'
     })
