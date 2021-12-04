@@ -1,13 +1,13 @@
 const express = require('express'); 
 const path = require('path');
 const bodyParser = require('body-parser');
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
-const handlebars = require('express-handlebars');
+const errorPages = require('./controllers/errorPage')
 const app = express();
 
-app.engine('hbs',handlebars({defaultLayout:false}))
-app.set('view engine', 'hbs')
+
+app.set('view engine', 'ejs')
 app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,12 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.use('/admin', adminData.router);
+app.use('/admin', adminRoutes);
 
 app.use(shopRoutes);
 
-app.use((req, res, next) => {
-    res.status(404).render('404',{docTitle:'Page not found'});
-});
+app.use(errorPages);
 
 app.listen(3000);
